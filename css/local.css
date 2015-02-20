@@ -1,7 +1,61 @@
 /*!
- * Andy Osuna - MediExcel Bootstrap Theme (http://github.com/andyosuna/mediexcel.com)
+ * Andy Osuna (@andiosuna) - MediExcel Bootstrap Theme (http://github.com/andyosuna/medgiexcel.com)
  * Code licensed under the GNU GPL v3.0.
  * For details, see http://www.gnu.org/licenses/gpl-3.0.html
  */
+/*
+
+general tags
+
+*/
+html {
+  position: relative;
+  min-height: 100%; }
+
+body {
+  padding-bottom: 80px; }
+
+section {
+  width: 100%;
+  padding: 25px 0 35px; }
+  section h2 {
+    text-align: center; }
+  section small {
+    display: block;
+    padding: 10px 0 20px; }
+
+/* 
+
+general classes
+
+*/
+.primary {
+  color: #6ca940; }
+
+.grey-bg {
+  background-color: #f8f8f8; }
+
+.light-primary-bg {
+  background-color: #bee2a4; }
+
+/* homepage sections */
+#services {
+  text-align: center; }
+  #services .fa-heartbeat {
+    margin-top: 5px; }
+
+#location iframe {
+  border: 0;
+  width: 100%;
+  min-height: 400px; }
+
+/* site footer */
+.footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding: 25px 0; }
+  .footer .list-inline {
+    text-align: right; }
 
 /*# sourceMappingURL=local.css.map */

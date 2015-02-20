@@ -2,6 +2,14 @@
 
 This is a simple HTML template for MediExcel's website development. Feel free to use it in your own project and to contribute any changes to make this better.
 
+## Powered by
+
+This template is powered by all these awesome open source front-end tools. Go check them out!
+
+* [Bootstrap](http://getbootstrap.com/)
+* [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
+* [Animate.css](http://daneden.github.io/animate.css/)
+
 ## Contributing
 
 Here’s how I usually go about proposing a change to repos:
