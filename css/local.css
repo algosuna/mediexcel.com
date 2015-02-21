@@ -32,6 +32,10 @@ general classes
 .primary {
   color: #6ca940; }
 
+.primary-bg {
+  background-color: #6ca940;
+  color: #ffffff; }
+
 .grey-bg {
   background-color: #f8f8f8; }
 
@@ -39,6 +43,16 @@ general classes
   background-color: #bee2a4; }
 
 /* homepage sections */
+header.main {
+  background-image: url("../images/header-bg.jpg");
+  background-repeat: no-repeat;
+  height: 500px;
+  color: #ffffff; }
+  header.main .row {
+    margin-top: 200px; }
+  header.main h3 {
+    margin-top: 0px; }
+
 #services {
   text-align: center; }
   #services .fa-heartbeat {
@@ -56,6 +70,9 @@ general classes
   width: 100%;
   padding: 25px 0; }
   .footer .list-inline {
-    text-align: right; }
+    text-align: right;
+    color: #ff0000; }
+
+/* scroll-top button */
 
 /*# sourceMappingURL=local.css.map */

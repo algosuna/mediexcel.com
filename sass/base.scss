@@ -1,0 +1,108 @@
+/*!
+ * Andy Osuna (@andiosuna) - MediExcel Bootstrap Theme (http://github.com/andyosuna/medgiexcel.com)
+ * Code licensed under the GNU GPL v3.0.
+ * For details, see http://www.gnu.org/licenses/gpl-3.0.html
+ */
+
+// vars
+$primary: #6ca940;
+$light-primary: #bee2a4;
+$light-grey: #f8f8f8;
+
+/*
+
+general tags
+
+*/
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    padding-bottom: 80px;
+}
+
+section {
+    width: 100%;
+    padding: 25px 0 35px;
+    h2 {
+        text-align: center;
+    }
+    small {
+        display: block;
+        padding: 10px 0 20px;
+    }
+}
+
+/* 
+
+general classes
+
+*/
+
+.primary {
+    color: $primary;
+}
+
+.primary-bg {
+    background-color: $primary;
+    color: #ffffff;
+}
+
+.grey-bg {
+    background-color: $light-grey;
+}
+
+.light-primary-bg {
+    background-color: $light-primary;
+}
+
+/* homepage sections */
+header.main {
+    background-image: url('../images/header-bg.jpg');
+    background-repeat: no-repeat;
+
+    height: 500px;
+
+    color: #ffffff;
+    .row {
+        margin-top: 200px;
+    }
+    h3 {
+        margin-top: 0px;
+    }
+}
+#services {
+    text-align: center;
+
+    .fa-heartbeat {
+        margin-top: 5px
+    }
+}
+#location iframe {
+    border: 0;
+    width: 100%;
+    min-height: 400px;
+}
+// #location #map {
+//     width: 100%;
+//     min-height: 400px;
+//     margin: 0;
+//     padding: 0;
+// } for use with maps api
+
+/* site footer */
+.footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 25px 0;
+    .list-inline {
+        text-align: right;
+        color: #ff0000;
+    }
+}
+
+/* scroll-top button */
+
