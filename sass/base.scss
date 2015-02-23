@@ -1,38 +1,52 @@
 /*!
- * Andy Osuna (@andiosuna) - MediExcel Bootstrap Theme (http://github.com/andyosuna/medgiexcel.com)
- * Code licensed under the GNU GPL v3.0.
- * For details, see http://www.gnu.org/licenses/gpl-3.0.html
+ * Andy Osuna (@andiosuna) - MediExcel Bootstrap Theme (http://github.com/andyosuna/mediexcel.com)
+ * Licensed under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
  */
 
 // vars
-$primary: #6ca940;
-$light-primary: #bee2a4;
+$main: #6ca940;
+$light-main: #bee2a4;
+$dark-main: #559626;
+$darker-main: #448614;
 $light-grey: #f8f8f8;
+$white: #ffffff;
+
+// mixins
+@mixin transition($property, $time) {
+  -webkit-transition: $property $time ease-in-out;
+     -moz-transition: $property $time ease-in-out;
+       -o-transition: $property $time ease-in-out;
+          transition: $property $time ease-in-out;
+}
 
 /*
 
 general tags
 
 */
+
 html {
-    position: relative;
-    min-height: 100%;
+  position: relative;
+  min-height: 100%;
 }
 
 body {
-    padding-bottom: 80px;
+  margin-top: 140px;
+  padding-bottom: 80px;
 }
 
 section {
-    width: 100%;
-    padding: 25px 0 35px;
-    h2 {
-        text-align: center;
-    }
-    small {
-        display: block;
-        padding: 10px 0 20px;
-    }
+  width: 100%;
+  padding: 25px 0 35px;
+
+  h2 { text-align: center; }
+
+  small {
+    display: block;
+    padding: 10px 0 20px;
+  }
+
 }
 
 /* 
@@ -41,68 +55,250 @@ general classes
 
 */
 
-.primary {
-    color: $primary;
+.main { color: $main; }
+
+.main-bg {
+  background-color: $main;
+  color: $white;
 }
 
-.primary-bg {
-    background-color: $primary;
-    color: #ffffff;
+.grey-bg { background-color: $light-grey; }
+
+.light-main-bg { background-color: $light-main; }
+
+.muted {
+  color: $white;
+  background-color: rgba(0, 0, 0, 0.6);
+  
+  small { color: #cccccc; }
+
+  blockquote { border-color: $main;
+    
+    footer { @extend small; }
+
+  }
+
 }
 
-.grey-bg {
-    background-color: $light-grey;
+.btn-main {
+  @extend .main-bg;
+  border-color: $dark-main;
+  @include transition(background-color, 0.2s);
 }
 
-.light-primary-bg {
-    background-color: $light-primary;
+.btn-main:hover,
+.btn-main:focus,
+.btn-main.focus,
+.btn-main:active,
+.btn-main.active,
+.open > .dropdown-toggle.btn-main {
+  color: $white;
+  background-color: $dark-main;
+  border-color: $darker-main;
 }
 
-/* homepage sections */
-header.main {
-    background-image: url('../images/header-bg.jpg');
-    background-repeat: no-repeat;
+.btn-main:active,
+.btn-main.active,
+.open > .dropdown-toggle.btn-main { background-image: none; }
 
-    height: 500px;
-
-    color: #ffffff;
-    .row {
-        margin-top: 200px;
-    }
-    h3 {
-        margin-top: 0px;
-    }
+.btn-main.disabled,
+.btn-main[disabled],
+fieldset[disabled] .btn-main,
+.btn-main.disabled:hover,
+.btn-main[disabled]:hover,
+fieldset[disabled] .btn-main:hover,
+.btn-main.disabled:focus,
+.btn-main[disabled]:focus,
+fieldset[disabled] .btn-main:focus,
+.btn-main.disabled.focus,
+.btn-main[disabled].focus,
+fieldset[disabled] .btn-main.focus,
+.btn-main.disabled:active,
+.btn-main[disabled]:active,
+fieldset[disabled] .btn-main:active,
+.btn-main.disabled.active,
+.btn-main[disabled].active,
+fieldset[disabled] .btn-main.active {
+  @extend .light-main-bg;
+  @extend .main;
 }
-#services {
-    text-align: center;
 
-    .fa-heartbeat {
-        margin-top: 5px
-    }
-}
-#location iframe {
-    border: 0;
-    width: 100%;
-    min-height: 400px;
-}
-// #location #map {
-//     width: 100%;
-//     min-height: 400px;
-//     margin: 0;
-//     padding: 0;
-// } for use with maps api
+.btn-main .badge { @extend .main-bg; }
 
-/* site footer */
+/*
+
+general components
+
+*/
+
+/* navigation */
+
+.navbar-brand {
+  background-image: url(../images/logo.png);
+  background-repeat: no-repeat;
+  display: block;
+  width: 193px;
+  height: 100px;
+  background-size: 193px 100px;
+  margin: 20px !important;
+  padding: 0px;
+  text-indent: -1000px;
+  outline: none;
+  @include transition(all, 0.2s);
+}
+
+.navbar-right {
+  margin-right: 0px;
+  position: relative;
+  top: 75px;
+  @include transition(top, 0.2s);
+}
+
+.navbar-nav > li > a {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 120%;
+}
+
+.navbar-default .navbar-nav > li > a:hover { color: $main; }
+
+.shrink {
+
+  .navbar-brand {
+    margin: 10px !important;
+    width: 115px;
+    height: 60px;
+    background-size: 115px 60px;
+  }
+
+  .navbar-right { top: 10px; }
+
+}
+
+/* footer */
+
 .footer {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    padding: 25px 0;
-    .list-inline {
-        text-align: right;
-        color: #ff0000;
-    }
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding: 25px 0;
+
+  .list-inline {
+    text-align: right;
+    color: #ff0000;
+  }
+
 }
 
 /* scroll-top button */
 
+.scroll-top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: none;
+
+  .fa-arrow-up {
+    padding: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    @include transition(color, 0.2s);
+  }
+
+  .fa-square {
+    color: rgba(108, 169, 64, 0.5);
+    @include transition(color, 0.2s);
+  }
+
+}
+
+.scroll-top:hover {
+
+  .fa-arrow-up { color: $white; }
+
+  .fa-square { color: $main; }
+
+}
+
+.scroll-top.visible { display: block; }
+
+/*
+
+page-specific styling
+
+*/
+
+/* homepage */
+
+header.main {
+  height: 500px;
+  color: $white;
+
+  .carousel-inner {
+    width: 100%;
+    height: 100%;
+
+    .item { @extend .carousel-inner;
+
+      .carousel-caption {
+        text-align: left;
+
+        h3,
+        h3 + h2 { margin: 0px; }
+
+        h2 { font-size: 300%; }
+
+        h3 { font-size: 250%; }
+
+        a.btn { margin-top: 20px; }
+
+      }
+
+    }
+
+    .parallax {// position set to center content
+      position: absolute;
+      max-width: none;// overrides bootstrap's max-width
+      min-width: 100%;
+      min-height: 500px;// keeps the image from overflowing the container at small widths
+    }
+
+    .parallax:empty {// centers content on the page
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+         -moz-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+           -o-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+    }
+
+  }
+
+}
+
+#services { text-align: center;
+
+  .fa-heartbeat { margin-top: 5px }
+
+}
+
+#testimonials {
+    // stuff
+}
+
+#location {
+  background-image: url(../images/map-image.png);
+
+  iframe {
+    border: 0;
+    width: 100%;
+    min-height: 400px;
+  }
+}
+
+// #location #map {
+//   width: 100%;
+//   min-height: 400px;
+//   margin: 0;
+//   padding: 0;
+// } for use with maps api
