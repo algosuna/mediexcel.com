@@ -9,22 +9,19 @@ This template is powered by all these awesome open source front-end tools. Go ch
 * [Bootstrap](http://getbootstrap.com/)
 * [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
 * [Animate.css](http://daneden.github.io/animate.css/)
+* [Parallax.js](http://pixelcog.github.io/parallax.js/)
 
 ## Contributing
 
 Here’s how I usually go about proposing a change to repos:
 
-1. [Fork this project][fork] to your account.
-2. [Create a branch][branch] for the change you intend to make.
+1. [Fork this project](http://help.github.com/forking/) to your account.
+2. [Create a branch](https://help.github.com/articles/creating-and-deleting-branches-within-your-repository) for the change you intend to make.
 3. Make your changes to your fork.
-4. [Send a pull request][pr] from your fork’s branch to this `master` branch.
+4. [Send a pull request](http://help.github.com/pull-requests/) from your fork’s branch to this `master` branch.
 
 You can also use the web interface to make changes.
 
-[fork]: http://help.github.com/forking/
-[branch]: https://help.github.com/articles/creating-and-deleting-branches-within-your-repository
-[pr]: http://help.github.com/pull-requests/
-
 ## License
 
-[GNU GPL v3](./LICENSE).
+[MIT](./LICENSE).
