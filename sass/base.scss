@@ -33,7 +33,7 @@ html {
 
 body {
   margin-top: 140px;
-  padding-bottom: 80px;
+  padding-bottom: 126px;
 }
 
 section {
@@ -47,6 +47,22 @@ section {
     padding: 10px 0 20px;
   }
 
+}
+
+a {
+  color: $main;
+  text-decoration: none;
+  @include transition(color, 0.2s);
+}
+a:hover,
+a:focus {
+  color: $dark-main;
+  text-decoration: underline;
+}
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
 }
 
 /* 
@@ -160,7 +176,12 @@ general components
   font-size: 120%;
 }
 
-.navbar-default .navbar-nav > li > a:hover { color: $main; }
+.navbar-default {
+    background-color: $white;
+
+    .navbar-nav > li > a:hover { color: $main; }
+
+}
 
 .shrink {
 
@@ -181,13 +202,23 @@ general components
   position: absolute;
   bottom: 0px;
   width: 100%;
-  padding: 25px 0;
+  padding: 20px 0;
+
+  .text-muted {
+    margin-top: 30px;
+  }
 
   .list-inline {
+    @extend .text-muted;
     text-align: right;
     color: #ff0000;
   }
-
+  
+  .credit {
+    display: block;
+    width: 100%;
+    padding-top: 10px;
+  }
 }
 
 /* scroll-top button */
@@ -302,3 +333,7 @@ header.main {
 //   margin: 0;
 //   padding: 0;
 // } for use with maps api
+
+#links ul {
+  padding-left: 15px;
+}

@@ -14,7 +14,7 @@ html {
 
 body {
   margin-top: 140px;
-  padding-bottom: 80px; }
+  padding-bottom: 126px; }
 
 section {
   width: 100%;
@@ -24,6 +24,24 @@ section {
   section small, section .muted blockquote footer, .muted blockquote section footer {
     display: block;
     padding: 10px 0 20px; }
+
+a {
+  color: #6ca940;
+  text-decoration: none;
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out; }
+
+a:hover,
+a:focus {
+  color: #559626;
+  text-decoration: underline; }
+
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px; }
 
 /* 
 
@@ -143,8 +161,10 @@ general components
   padding-bottom: 20px;
   font-size: 120%; }
 
-.navbar-default .navbar-nav > li > a:hover {
-  color: #6ca940; }
+.navbar-default {
+  background-color: #ffffff; }
+  .navbar-default .navbar-nav > li > a:hover {
+    color: #6ca940; }
 
 .shrink .navbar-brand {
   margin: 10px !important;
@@ -159,10 +179,16 @@ general components
   position: absolute;
   bottom: 0px;
   width: 100%;
-  padding: 25px 0; }
+  padding: 20px 0; }
+  .footer .text-muted, .footer .list-inline {
+    margin-top: 30px; }
   .footer .list-inline {
     text-align: right;
     color: #ff0000; }
+  .footer .credit {
+    display: block;
+    width: 100%;
+    padding-top: 10px; }
 
 /* scroll-top button */
 .scroll-top {
@@ -278,5 +304,8 @@ fieldset[disabled] header.btn-main.active {
     border: 0;
     width: 100%;
     min-height: 400px; }
+
+#links ul {
+  padding-left: 15px; }
 
 /*# sourceMappingURL=local.css.map */
