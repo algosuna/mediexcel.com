@@ -5,12 +5,13 @@
  */
 
 // vars
-$main: #6ca940;
-$light-main: #bee2a4;
-$dark-main: #559626;
-$darker-main: #448614;
+$main: #1468A8;
+$light-main: #7EC2F5;
+$dark-main: #0B5F9E;
+$darker-main: #004D88;
 $light-grey: #f8f8f8;
 $white: #ffffff;
+$half-main: rgba(20, 104, 168, 0.5);
 
 // mixins
 @mixin transition($property, $time) {
@@ -236,7 +237,7 @@ general components
   }
 
   .fa-square {
-    color: rgba(108, 169, 64, 0.5);
+    color: $half-main;
     @include transition(color, 0.2s);
   }
 
@@ -307,6 +308,10 @@ header.main {
 
 }
 
+#headline {
+  padding: 30px 0 10px;
+}
+
 #services { text-align: center;
 
   .fa-heartbeat { margin-top: 5px }
@@ -323,7 +328,7 @@ header.main {
   iframe {
     border: 0;
     width: 100%;
-    min-height: 400px;
+    min-height: 320px;
   }
 }
 
@@ -333,6 +338,15 @@ header.main {
 //   margin: 0;
 //   padding: 0;
 // } for use with maps api
+
+#video {
+
+  iframe {
+    width: 100%;
+    min-height: 320px;
+  }
+
+}
 
 #links ul {
   padding-left: 15px;
